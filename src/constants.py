@@ -21,7 +21,8 @@ XTTS_LANGUAGES = ["en", "es", "fr", "de", "it", "pt", "pl", "tr", "ru", "nl", "c
 
 
 Segmind_Models = ["Flux-1.1 Pro Ultra", "Recraft V3", "Recraft V3 Svg", "Stable Diffusion 3.5 Turbo", "Stable Diffusion 3.5 Large", "Flux-1.1 Pro", "Simple Vector Flux", "Ideogram Text To Image", "Fast Flux.1 Schnell", "Flux Realism Lora", "Flux Dev", "Flux.1 Schnell", "Flux Pro", "Realdream Pony V9", "RealDream Lightning", "Playground V2.5", "Background Eraser", "Stable Diffusion 3 Medium", "Segmind-Vega", "Segmind-VegaRT", "SSD-1B", "Stable Diffusion XL 1.0", "Scifi", "Samaritan", "RPG", "Reliberate", "Realistic Vision", "RCNZ - Cartoon", "Paragon", "Manmarumix", "Majicmix", "Juggernaut Final", "Fruit Fusion", "Flat 2d", "Fantassified Icons", "Epic Realism", "Edge of Realism", "DvArch", "Dream Shaper", "Deep Spaced Diffusion", "Cyber Realistic", "Cute Rich Style", "Colorful", "All in one pixe", "526mix", "QR Generator", "Segmind Tiny-SD (Portrait)", "Kandinsky 2.1", "Revanimated"]
-
+HERCAI_MODELS = ["v1", "v2", "v3 (DALL-E)", "lexica", "simurg", "animefy", "raava", "shonin"]
+PRODIA_MODELS = ["breakdomain_I2428.safetensors [43cc7d2f]", "dreamlike-anime-1.0.safetensors [4520e090]", "absolutereality_v181.safetensors [3d9d4d2b]", "breakdomain_M2150.safetensors [15f7afca]", "anythingV5_PrtRE.safetensors [893e49b9]", "shoninsBeautiful_v10.safetensors [25d8c546]", "dalcefo_v4.safetensors [425952fe]", "EimisAnimeDiffusion_V1.ckpt [4f828a15]", "dreamshaper_8.safetensors [9d40847d]", "epicrealism_naturalSinRC1VAE.safetensors [90a4c676]", "revAnimated_v122.safetensors [3f4fefd9]", "meinamix_meinaV11.safetensors [b56ce717]", "neverendingDream_v122.safetensors [f964ceeb]", "AOM3A3_orangemixs.safetensors [9600da17]", "aniverse_v30.safetensors [579e6f85]", "blazing_drive_v10g.safetensors [ca1c1eab]", "cetusMix_Version35.safetensors [de2f2560]", "Counterfeit_v30.safetensors [9e2a8f19]"]
 
 # YouTube Section
 YOUTUBE_TEXTBOX_ID = "textbox"
