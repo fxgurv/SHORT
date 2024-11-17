@@ -22,3 +22,4 @@ edge-tts
 playsound
 setuptools
 telethon
+psutil
