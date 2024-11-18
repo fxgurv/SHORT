@@ -12,8 +12,6 @@
   "tts_voice": "nova",
   "threads": 8,
   "is_for_kids": false,
-  "zip_url": "https://huggingface.co/AZILS/BG/resolve/main/BG.zip?download=true",
-  "local_tts_url": "https://imseldrith-tts-openai-free.hf.space/v1/audio/speech",
   "gemini_api_key": "AIzaSyCYa8eO813tY",
   "assembly_ai_api_key": "e9c2df77f2a9e6a45",
   "elevenlabs_api_key": "bfd7246976a32121",
@@ -22,4 +20,6 @@
   "segmind_api_key": "bfd121",
   "font": "bold_font.ttf",
   "imagemagick_path": "/usr/bin/convert"
+  "zip_url": "https://huggingface.co/AZILS/BG/resolve/main/BG.zip?download=true",
+  "local_tts_url": "https://imseldrith-tts-openai-free.hf.space/v1/audio/speech",  
 }
