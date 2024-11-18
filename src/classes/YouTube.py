@@ -47,7 +47,7 @@ class YouTube:
     
     def generate_response(self, prompt: str, model: any = None) -> str:
         info(f"Generating response for prompt: {prompt[:50]}...")
-        if get_model() == "Gemini":
+        if get_model() == "google":
             info("Using Google's Gemini model")
             import google.generativeai as genai
             genai.configure(api_key=get_gemini_api_key())
