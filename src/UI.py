@@ -1,18 +1,18 @@
-
+from flask import Flask, request, jsonify, send_file
 import os
 import json
-import uuid
-import time
 import psutil
 import datetime
 import platform
 import schedule
 import threading
+import uuid
+import time
 from classes.YouTube import YouTube
-from status import info, success, error
-from config import assert_folder_structure
-from flask import Flask, request, jsonify, send_file
 from cache import get_accounts, add_account as cache_add_account, remove_account as cache_remove_account
+from status import info, success, error
+from utils import close_running_selenium_instances, rem_temp_files
+from config import assert_folder_structure
 
 app = Flask(__name__)
 
