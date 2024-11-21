@@ -54,14 +54,14 @@ def main():
 
                 success(f" => Generated ID: {generated_uuid}")
                 nickname = question(" => Enter a nickname for this account: ")
-                fp_profile = question(" => Enter the path to the Firefox profile: ")
+                profile_path = question(" => Enter the path to the browser profile: ")
                 niche = question(" => Enter the account niche: ")
                 language = question(" => Enter the account language: ")
 
                 add_account("youtube", {
                     "id": generated_uuid,
                     "nickname": nickname,
-                    "firefox_profile": fp_profile,
+                    "profile_path": profile_path,
                     "niche": niche,
                     "language": language,
                     "videos": []
@@ -93,7 +93,7 @@ def main():
                 youtube = YouTube(
                     selected_account["id"],
                     selected_account["nickname"],
-                    selected_account["firefox_profile"],
+                    selected_account["profile_path"],
                     selected_account["niche"],
                     selected_account["language"]
                 )
@@ -190,13 +190,13 @@ def main():
 
                 success(f" => Generated ID: {generated_uuid}")
                 nickname = question(" => Enter a nickname for this account: ")
-                fp_profile = question(" => Enter the path to the Firefox profile: ")
+                profile_path = question(" => Enter the path to the browser profile: ")
                 topic = question(" => Enter the account topic: ")
 
                 add_account("twitter", {
                     "id": generated_uuid,
                     "nickname": nickname,
-                    "firefox_profile": fp_profile,
+                    "profile_path": profile_path,
                     "topic": topic,
                     "posts": []
                 })
@@ -227,7 +227,7 @@ def main():
                 twitter = Twitter(
                     selected_account["id"],
                     selected_account["nickname"],
-                    selected_account["firefox_profile"],
+                    selected_account["profile_path"],
                     selected_account["topic"]
                 )
 
@@ -336,7 +336,7 @@ def main():
                 })
                 success(f"Added new product with affiliate link: {affiliate_link}")
 
-                afm = AffiliateMarketing(affiliate_link, account["firefox_profile"], account["id"], account["nickname"], account["topic"])
+                afm = AffiliateMarketing(affiliate_link, account["profile_path"], account["id"], account["nickname"], account["topic"])
 
                 info("Generating pitch for affiliate marketing")
                 afm.generate_pitch()
@@ -371,7 +371,7 @@ def main():
                     if acc["id"] == selected_product["twitter_uuid"]:
                         account = acc
 
-                afm = AffiliateMarketing(selected_product["affiliate_link"], account["firefox_profile"], account["id"], account["nickname"], account["topic"])
+                afm = AffiliateMarketing(selected_product["affiliate_link"], account["profile_path"], account["id"], account["nickname"], account["topic"])
 
                 info("Generating pitch for affiliate marketing")
                 afm.generate_pitch()
