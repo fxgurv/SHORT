@@ -436,24 +436,6 @@ class YouTube:
             error(f"Speech generation failed: {str(e)}")
             return None
     
-    def add_video(self, video: dict) -> None:
-        info(f"Adding video to cache: {video}")
-        videos = self.get_videos()
-        videos.append(video)
-
-        cache = get_youtube_cache_path()
-
-        with open(cache, "r") as file:
-            previous_json = json.loads(file.read())
-            
-            accounts = previous_json["accounts"]
-            for account in accounts:
-                if account["id"] == self._account_uuid:
-                    account["videos"].append(video)
-            
-            with open(cache, "w") as f:
-                f.write(json.dumps(previous_json))
-        success("Video added to cache")
 
     def generate_subtitles(self, audio_path: str) -> str:
         info("Generating subtitles for the audio")
@@ -622,7 +604,7 @@ class YouTube:
             self.generate_image(prompt)
         
         info("Generating speech")
-        self.generate_speech(self.script)  # Using new integrated TTS method
+        self.generate_speech(self.script)  
         
         info("Combining all elements into final video")
         path = self.combine()
@@ -634,34 +616,6 @@ class YouTube:
         self.save_metadata()
         
         return path
-        
-
     
     def upload_video(self) -> bool:
         return self.uploader.upload_video(self.video_path, self.metadata["title"], self.metadata["description"])
-
-    def get_videos(self) -> List[dict]:
-        try:
-            info("Retrieving uploaded videos from cache")
-            if not os.path.exists(get_youtube_cache_path()):
-                # Create the cache file
-                with open(get_youtube_cache_path(), 'w') as file:
-                    json.dump({
-                        "videos": []
-                    }, file, indent=4)
-                return []
-
-            videos = []
-            # Read the cache file
-            with open(get_youtube_cache_path(), 'r') as file:
-                previous_json = json.loads(file.read())
-                # Find our account
-                accounts = previous_json["accounts"]
-                for account in accounts:
-                    if account["id"] == self._account_uuid:
-                        videos = account["videos"]
-            success(f"Retrieved {len(videos)} videos from cache")
-            return videos
-        except Exception as e:
-            error(f"Failed to retrieve videos from cache: {e}")
-            return []
