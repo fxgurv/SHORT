@@ -13,6 +13,9 @@ def assert_folder_structure() -> None:
             print(colored(f"=> Creating .mp folder at {os.path.join(ROOT_DIR, '.mp')}", "green"))
         os.makedirs(os.path.join(ROOT_DIR, ".mp"))
 
+def get_fonts_dir() -> str:
+    return os.path.join(ROOT_DIR, "fonts")
+
 def get_first_time_running() -> bool:
     return not os.path.exists(os.path.join(ROOT_DIR, ".mp"))
 
@@ -94,9 +97,6 @@ def equalize_subtitles(srt_path: str, max_chars: int = 10) -> None:
 def get_font() -> str:
     with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
         return json.load(file)["font"]
-
-def get_fonts_dir() -> str:
-    return os.path.join(ROOT_DIR, "fonts")
 
 def get_imagemagick_path() -> str:
     with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
