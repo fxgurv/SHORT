@@ -141,3 +141,7 @@ def get_stability_api_key() -> str:
 def get_leonardo_api_key() -> str:
     with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
         return json.load(file)["leonardo_api_key"]
+
+def get_segmind_api_key() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["segmind_api_key"]
