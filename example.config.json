@@ -11,17 +11,19 @@
   "image_model": "shonin",
   "tts_engine": "local_tts",
   "tts_voice": "nova",
-  "transcriber": "assemblyai",  // or "whisper", "google", etc.
+  "subtitles": true,
+  "transcriber": "whisper",
+  "whisper_model": "base",  
   "font": "bold_font.ttf",
-  "subtitle_style": "word_highlight", // word_by_word, active_highlight, background_highlight
-  "faster_whisper_model": small,  //small, medium, large,
+  "subtitle_style": "word_highlight",
   "font_size": 50,
-  "position": "center",     // center, mid, top
+  "max_words_per_line": 4,
+  "max_lines": 2,  
+  "position": "center",
   "font_color": "#FFFFFF",
-  "highlight_color": "#FF0000", (only implement if Subtitle_style is word_highlight, active word will be highlighted as speaker will speak)
-  "background_color": "#000000", (only implement if Subtitle_style is background_highlight active word background will be highlighted as speaker will speak)
+  "highlight_color": "#FF0000",
+  "background_color": "#000000",
   "stroke_color": "#000000", 
-  "max_lines": 2 (this will be useless if subtitle style is Word by word  
   "threads": 8,
   "is_for_kids": false,
   "zip_url": "https://huggingface.co/AZILS/BG/resolve/main/BG.zip?download=true",
