@@ -19,7 +19,7 @@
   "highlight_color": "#FF0000",
   "font_size": 50,
   "text_color": "#FFFFFF",
-  stroke_width": 2,
+  "stroke_width": 2,
   "max_characters_per_line": 15
   "max_lines": 2
   "line_spacing": 0
