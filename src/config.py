@@ -145,3 +145,35 @@ def get_leonardo_api_key() -> str:
 def get_segmind_api_key() -> str:
     with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
         return json.load(file)["segmind_api_key"]
+
+def get_subtitles() -> bool:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["subtitles"]
+
+def get_transcriber() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["transcriber"]
+
+def get_whisper_model() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["whisper_model"]
+
+def get_subtitle_style() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["subtitle_style"]
+
+def get_highlight_color() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["highlight_color"]
+
+def get_subtitles_text_color() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["subtitles_text_color"]
+        
+def get_stroke_color() -> str:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["stroke_color"]
+
+def get_stroke_width() -> int:
+    with open(os.path.join(ROOT_DIR, "config.json"), "r") as file:
+        return json.load(file)["stroke_width"]
